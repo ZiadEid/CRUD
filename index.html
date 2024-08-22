@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD Project</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="text-center mt-4">
+      <h1 class="h2">CRUDS</h1>
+      <p class="h5 fw-light">PROUCT MANAGMENT SYSTEM</p>
+    </header>
+    <section class="inputs">
+      <div class="container">
+        <input
+          class="border-0 rounded-1 text-light w-100 p-2 my-2"
+          required
+          type="text"
+          name="name"
+          id="name"
+          placeholder="Name"
+        />
+        <div class="price d-flex flex-lg-nowrap flex-wrap align-items-center">
+          <input
+            class="border-0 rounded-1 text-light p-2 my-2"
+            type="number"
+            name="price"
+            id="price"
+            placeholder="Price"
+          />
+          <input
+            class="border-0 rounded-1 text-light p-2 my-2"
+            type="number"
+            name="taxes"
+            id="taxes"
+            placeholder="Taxes"
+          />
+          <input
+            class="border-0 rounded-1 text-light p-2 my-2"
+            type="number"
+            name="ads"
+            id="ads"
+            placeholder="Ads"
+          />
+          <input
+            class="border-0 rounded-1 text-light p-2 my-2"
+            type="number"
+            name="discount"
+            id="discount"
+            placeholder="discount"
+          />
+          <span
+            class="bg-danger text-light d-block fw-bold ps-2 rounded-1"
+            id="total"
+          ></span>
+        </div>
+        <input
+          class="border-0 rounded-1 text-light w-100 p-2 my-2"
+          type="number"
+          name="count"
+          id="count"
+          placeholder="Count"
+        />
+        <input
+          class="border-0 rounded-1 text-light w-100 p-2 my-2"
+          type="text"
+          name="category"
+          id="category"
+          placeholder="Category"
+        />
+        <input
+          class="text-light btn  py-1 w-100 rounded-5"
+          type="submit"
+          value="Create"
+          id="create"
+        />
+      </div>
+    </section>
+    <section class="outputs">
+      <div class="container">
+        <div class="searchBlock mt-4">
+          <div class="position-relative my-2 rounded-1 overflow-hidden">
+            <input
+              class="border-0 rounded-1 text-light w-100 p-2"
+              type="search"
+              name="search"
+              id="search"
+              placeholder="search ..!"
+            />
+            <span
+              id="searchIcon"
+              class="position-absolute end-0 h-100 pt-2 text-center"
+              >Name</span
+            >
+          </div>
+          <div
+            class="labelBox d-flex justify-content-between align-items-center"
+          >
+            <label
+              id="searchName"
+              class="rounded-5 py-1 text-center"
+              for="search"
+              >Search By Name</label
+            >
+            <label
+              id="searchCategory"
+              class="rounded-5 py-1 text-center"
+              for="search"
+              >Search By Category</label
+            >
+          </div>
+          <button id="deleteAll" class="btn rounded-5 py-1 my-2 text-light w-100">
+            Delete All
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="display">
+      <div class="container">
+        <table class="table text-light text-center mt-4">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th class="nameItem">NAMES</th>
+              <th>PRICE</th>
+              <th>TAXES</th>
+              <th>ADS</th>
+              <th>DISCOUNT</th>
+              <th>TOTAL</th>
+              <th>COUNT</th>
+              <th class="categoryItem">CATEGORY</th>
+              <th>UPDATE</th>
+              <th>DELETE</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
